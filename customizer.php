@@ -183,7 +183,7 @@ function snedecor_gl_customizer( $wp_customize ){
   $wp_customize->add_control('casco_options[service_1_icons]',
       array(
     'label'        => __( 'Service Icon One', 'snedecor' ),
-    'description'=>__('<a href="http://fontawesome.bootstrapcheatsheets.com">FontAwesome Icons</a>','weblizar'),
+    'description'=>__('<a href="http://fontawesome.bootstrapcheatsheets.com">FontAwesome Icons</a>','snedecor'),
           'section'  => 'service_section',
     'type'=>'text',
     'settings'   => 'casco_options[service_1_icons]'
@@ -258,7 +258,7 @@ function snedecor_gl_customizer( $wp_customize ){
   $wp_customize->add_control( 'casco_options[service_2_icons]',
       array(
     'label'        => __( 'Service Icon Two', 'snedecor' ),
-    'description'=>__('<a href="http://fontawesome.bootstrapcheatsheets.com">FontAwesome Icons</a>','weblizar'),
+    'description'=>__('<a href="http://fontawesome.bootstrapcheatsheets.com">FontAwesome Icons</a>','snedecor'),
           'section'  => 'service_section',
     'type'=>'text',
     'settings'   => 'casco_options[service_2_icons]'
@@ -335,7 +335,7 @@ function snedecor_gl_customizer( $wp_customize ){
   $wp_customize->add_control('casco_options[service_3_icons]',
       array(
     'label'        => __( 'Service Icon Three', 'snedecor' ),
-    'description'=>__('<a href="http://fontawesome.bootstrapcheatsheets.com">FontAwesome Icons</a>','weblizar'),
+    'description'=>__('<a href="http://fontawesome.bootstrapcheatsheets.com">FontAwesome Icons</a>','snedecor'),
           'section'  => 'service_section',
     'type'=>'text',
     'settings'   => 'casco_options[service_3_icons]'
@@ -343,11 +343,11 @@ function snedecor_gl_customizer( $wp_customize ){
   );
 
   $wp_customize->add_setting(
-  'enigma_options[service_3_title]',
+  'casco_options[service_3_title]',
     array(
     'default'=>esc_attr($cs_theme_options['service_3_title']),
     'type'=>'option',
-    'sanitize_callback'=>'enigma_sanitize_text',
+    'sanitize_callback'=>'casco_sanitize_text',
     'capability'=>'edit_theme_options',
     )
   );
@@ -358,7 +358,7 @@ function snedecor_gl_customizer( $wp_customize ){
     'settings'   => 'casco_options[service_3_title]'
   ) );
   $wp_customize->add_setting(
-  'casco_options[service_3_text]',
+    'casco_options[service_3_text]',
     array(
     'default'=>esc_attr($cs_theme_options['service_3_text']),
     'type'=>'option',
@@ -405,6 +405,9 @@ function casco_sanitize_text( $input ) {
 }
 function casco_sanitize_integer( $input ) {
     return (int)($input);
+}
+function casco_sanitize_checkbox( $input ) {
+    return $input;
 }
 /* Custom Control Class */
 if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'casco_Customize_Misc_Control' ) ) :

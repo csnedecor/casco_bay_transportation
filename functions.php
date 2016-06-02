@@ -83,19 +83,19 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			// 'developed_by_link' => 'http://weblizar.com/',
 			'service_home'=>'1',
 			'home_service_heading' => __('Our Services', 'snedecor' ),
-			'service_1_title'=>__("Idea",'snedecor' ),
-			'service_1_icons'=>"fa fa-google",
-			'service_1_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'snedecor' ),
+			'service_1_title'=>__("FlatBeds for Heavy and Oversize Loads",'snedecor' ),
+			'service_1_icons'=>"fa-truck",
+			'service_1_text'=>__(" ", 'snedecor' ),
 			'service_1_link'=>"#",
 
-			'service_2_title'=>__('Records', 'snedecor' ),
-			'service_2_icons'=>"fa fa-database",
-			'service_2_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'snedecor' ),
+			'service_2_title'=>__('NEW Rail Service', 'snedecor' ),
+			'service_2_icons'=>"fa-train",
+			'service_2_text'=>__(" ", 'snedecor' ),
 			'service_2_link'=>"#",
 
-			'service_3_title'=>__("WordPress", 'snedecor' ),
-			'service_3_icons'=>"fa fa-wordpress",
-			'service_3_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'snedecor' ),
+			'service_3_title'=>__("Looking for Experienced Drivers", 'snedecor' ),
+			'service_3_icons'=>"fa-road",
+			'service_3_text'=>__(" ", 'snedecor' ),
 			'service_3_link'=>"#",
 
 			// //Portfolio Settings:
@@ -249,7 +249,6 @@ function casco_bay_transportation_scripts() {
 	wp_enqueue_style('bootstrap',  get_template_directory_uri() .'/css/bootstrap.css');
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() .'/js/bootstrap.js');
 	wp_enqueue_style( 'casco-bay-transportation-style', get_stylesheet_uri() );
-	wp_enqueue_style('animations', get_template_directory_uri() . '/css/animations.css');
 	wp_enqueue_script( 'casco-bay-transportation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'casco-bay-transportation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
