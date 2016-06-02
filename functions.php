@@ -7,14 +7,34 @@
  * @package Casco_Bay_Transportation
  */
 
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom functions that act independently of the theme templates.
+ */
+require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/customizer.php';
+
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/inc/jetpack.php';
+
 
 if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
-	// Include Required Resources:
-	require(dirname(__FILE__).'/customizer.php');
 
+	function snedecor_default_settings() {
+		$ImageUrl =  esc_url(get_template_directory_uri() ."/images/header-1.jpg");
+		$ImageUrl2 = esc_url(get_template_directory_uri() ."/images/header-2.jpg");
+		$ImageUrl3 = esc_url(get_template_directory_uri() ."/images/header-3.jpg");
 
-		function snedecor_default_settings()
-{
 		$cs_theme_options=array(
 			//Logo and Favicon header
 			'upload_image_logo'=>'',
@@ -24,17 +44,17 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			// 'blog_count'=>'3',
 			// 'upload_image_favicon'=>'',
 			// 'custom_css'=>'',
-			// 'slide_image_1' => $ImageUrl,
+			'slide_image_1' => $ImageUrl,
 			// 'slide_title_1' => __('Slide Title', 'snedecor' ),
 			// 'slide_desc_1' => __('Lorem Ipsum is simply dummy text of the printing', 'weblizar' ),
 			// 'slide_btn_text_1' => __('Read More', 'weblizar' ),
 			// 'slide_btn_link_1' => '#',
-			// 'slide_image_2' => $ImageUrl2,
+			'slide_image_2' => $ImageUrl2,
 			// 'slide_title_2' => __('variations of passages', 'weblizar' ),
 			// 'slide_desc_2' => __('Contrary to popular belief, Lorem Ipsum is not simply random text', 'weblizar' ),
 			// 'slide_btn_text_2' => __('Read More', 'weblizar' ),
 			// 'slide_btn_link_2' => '#',
-			// 'slide_image_3' => $ImageUrl3,
+			'slide_image_3' => $ImageUrl3,
 			// 'slide_title_3' => __('Contrary to popular ', 'weblizar' ),
 			// 'slide_desc_3' => __('Aldus PageMaker including versions of Lorem Ipsum, rutrum turpi', 'weblizar' ),
 			// 'slide_btn_text_3' => __('Read More', 'weblizar' ),
@@ -61,22 +81,22 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			// 'developed_by_text' => __('Theme Developed By', 'Cori Snedecor' ),
 			// 'developed_by_weblizar_text' => __('Weblizar Themes', 'weblizar' ),
 			// 'developed_by_link' => 'http://weblizar.com/',
-			// 'service_home'=>'1',
-			// 'home_service_heading' => __('Our Services', 'weblizar' ),
-			// 'service_1_title'=>__("Idea",'weblizar' ),
-			// 'service_1_icons'=>"fa fa-google",
-			// 'service_1_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'weblizar' ),
-			// 'service_1_link'=>"#",
+			'service_home'=>'1',
+			'home_service_heading' => __('Our Services', 'snedecor' ),
+			'service_1_title'=>__("Idea",'snedecor' ),
+			'service_1_icons'=>"fa fa-google",
+			'service_1_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'snedecor' ),
+			'service_1_link'=>"#",
 
-			// 'service_2_title'=>__('Records', 'weblizar' ),
-			// 'service_2_icons'=>"fa fa-database",
-			// 'service_2_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'weblizar' ),
-			// 'service_2_link'=>"#",
+			'service_2_title'=>__('Records', 'snedecor' ),
+			'service_2_icons'=>"fa fa-database",
+			'service_2_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'snedecor' ),
+			'service_2_link'=>"#",
 
-			// 'service_3_title'=>__("WordPress", 'weblizar' ),
-			// 'service_3_icons'=>"fa fa-wordpress",
-			// 'service_3_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'weblizar' ),
-			// 'service_3_link'=>"#",
+			'service_3_title'=>__("WordPress", 'snedecor' ),
+			'service_3_icons'=>"fa fa-wordpress",
+			'service_3_text'=>__("There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in.", 'snedecor' ),
+			'service_3_link'=>"#",
 
 			// //Portfolio Settings:
 			// 'portfolio_home'=>'1',
@@ -222,14 +242,15 @@ add_action( 'widgets_init', 'casco_bay_transportation_widgets_init' );
  * Enqueue scripts and styles.
  */
 function casco_bay_transportation_scripts() {
+	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/css/font-awesome-4.6.3/css/font-awesome.css');
+  wp_enqueue_style('OpenSansRegular','//fonts.googleapis.com/css?family=Open+Sans');
+  wp_enqueue_style('OpenSansBold','//fonts.googleapis.com/css?family=Open+Sans:700');
+  wp_enqueue_style('OpenSansSemiBold','//fonts.googleapis.com/css?family=Open+Sans:600');
 	wp_enqueue_style('bootstrap',  get_template_directory_uri() .'/css/bootstrap.css');
-
 	wp_enqueue_script('bootstrap-js', get_template_directory_uri() .'/js/bootstrap.js');
-
 	wp_enqueue_style( 'casco-bay-transportation-style', get_stylesheet_uri() );
-
+	wp_enqueue_style('animations', get_template_directory_uri() . '/css/animations.css');
 	wp_enqueue_script( 'casco-bay-transportation-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'casco-bay-transportation-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -237,28 +258,3 @@ function casco_bay_transportation_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'casco_bay_transportation_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';

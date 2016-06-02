@@ -902,6 +902,34 @@ object {
 .gallery-caption {
 	display: block;
 }
+/*=======================================*/
+/* General Theme stylse*/
+/*=======================================*/
+.casco_heading_title {
+	display: block;
+	margin: 0px 0 50px;
+	text-align:center;
+}
+.casco_heading_title h3 {
+	display: inline-block;
+	margin-top: 0px;
+	letter-spacing: 1px;
+	padding-bottom: 10px;
+	line-height: 40px;
+}
+
+.casco_heading_title h3 {
+	font-size: 30px;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+.casco_heading_title h3 {
+	border-bottom: 4px solid green;
+	color: #3b3b3b;
+}
+
 /*========================================*/
 /* Header */
 /*========================================*/
@@ -980,3 +1008,126 @@ p.site-description{
 .navbar-header button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{
 	box-shadow: none;
 }
+/**********************************************************************************************************************************************/
+/** Service Section  ***************************************************************************************************************
+********************************************************************************************************************************/
+.casco_service {
+	padding-top:90px;
+	padding-bottom:90px;
+
+}
+.casco_service_area{
+	border-radius: 0px;
+	margin-bottom: 65px;
+	transition: all 0.4s ease 0s;
+
+}
+.casco_service_icon{
+	width: 90px;
+	height: 90px;
+	display: block;
+	margin-right:20px;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	text-align:center;
+	-webkit-transition: all ease 0.8s;
+    -moz-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+}
+.casco_service_icon i{
+	color: #fff;
+	font-size: 50px;
+	position: relative;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 90px;
+	-webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+}
+.casco_service_detail h3 a{
+  color: green;
+}
+.casco_service_detail h3{
+	font-size: 24px;
+
+	letter-spacing: normal;
+	line-height: 32px;
+	word-wrap:break-word;
+	margin:0 0 10px;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+.casco_service_detail p{
+	font-size: 16px;
+	line-height: 27px;
+}
+.casco_service_area:hover .casco_service_icon{
+	background-position: 0 -100%;
+}
+.casco_service_area_2{
+	text-align:center;
+		border-radius: 0px;
+	margin-bottom: 65px;
+	transition: all 0.4s ease 0s;
+}
+.casco_service_icon_2 i{
+	background: #fff;
+	width: 90px;
+	height: 90px;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+	text-align:center;
+}
+.casco_service_icon_2 i{
+	font-size: 50px;
+	position: relative;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 90px;
+	-webkit-transition: all ease 0.8s;
+    -moz-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+}
+.casco_service_detail_2 h3{
+	font-size: 24px;
+	letter-spacing: normal;
+	line-height: 27px;
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+}
+.casco_service_detail_2 p{
+	font-size: 18px;
+	line-height: 27px;
+}
+.casco_service_area_2:hover .casco_service_icon_2 i{
+	background-position: 0 -100%;
+}
+.casco_service_area_2:hover .casco_service_icon_2 i {
+	color:#fff;
+}
+.casco_service_icon{
+	border: 4px solid green;
+	background-color:green;
+	background-size: 100% 200%;
+	background-image: linear-gradient(to bottom, green 50%, #fff 50%);
+}
+.casco_service_area:hover .casco_service_icon i {
+	color:green;
+}
+.casco_service_area:hover .casco_service_icon{background-color:#ffffff;}
+.casco_service_icon_2 i{
+	background: #fff;
+	border: 4px solid green;
+}
+.casco_service_icon_2 i{
+	color: green;
+	background-size: 100% 200%;
+	background-image: linear-gradient(to bottom, #fff 50%, green 50%);
+ }

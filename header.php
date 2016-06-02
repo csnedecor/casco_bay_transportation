@@ -45,31 +45,30 @@
 			</div>
 
 		</div><!-- .site-branding -->
-	<!-- Navigation  menus -->
-	<div class="navigation_menu"  data-spy="affix" data-offset-top="95" id="casco_nav_top">
-		<span id="header_shadow"></span>
-		<div class="container navbar-container" >
-			<nav class="navbar navbar-default " role="navigation">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+		<!-- Navigation  menus -->
+		<div class="navigation_menu"  data-spy="affix" data-offset-top="95" id="casco_nav_top">
+			<span id="header_shadow"></span>
+			<div class="container navbar-container" >
+				<nav class="navbar navbar-default " role="navigation">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
 
-					  <span class="sr-only"><?php _e('Toggle navigation','snedecor');?></span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					  <span class="icon-bar"></span>
-					</button>
-				</div>
-				<div id="menu" class="collapse navbar-collapse ">
-				<?php wp_nav_menu( array(
-						'theme_location' => 'primary',
-						'menu_class' => 'nav navbar-nav'
-						)
-						);	?>
-				</div>
-			</nav>
+						  <span class="sr-only"><?php _e('Toggle navigation','snedecor');?></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						  <span class="icon-bar"></span>
+						</button>
+					</div>
+					<div id="menu" class="collapse navbar-collapse ">
+					<?php wp_nav_menu( array(
+							'theme_location' => 'primary',
+							'menu_class' => 'nav navbar-nav'
+							)
+							);	?>
+					</div>
+				</nav>
+			</div>
 		</div>
-	</div>
-
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
