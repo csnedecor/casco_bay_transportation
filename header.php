@@ -38,11 +38,17 @@
 				</a>
 				<?php
 							$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<?php
+				endif; ?>
 			</div>
+			<?php if($cs_theme_options['email_id'] || $cs_theme_options['phone_no'] !='') { ?>
+				<ul class="head-contact-info">
+						<?php if($cs_theme_options['email_id'] !='') { ?><li><i class="fa fa-envelope"></i><a href="mailto:<?php echo $cs_theme_options['email_id']; ?>"><?php echo esc_attr($cs_theme_options['email_id']); ?></a></li><?php } ?>
+						<?php if($cs_theme_options['phone_no'] !='') { ?><li><i class="fa fa-phone"></i><a href="tel:<?php echo $cs_theme_options['phone_no']; ?>"><?php echo esc_attr($cs_theme_options['phone_no']); ?></a></li><?php } ?>
+				</ul>
+			<?php } ?>
 
 		</div><!-- .site-branding -->
 		<!-- Navigation  menus -->

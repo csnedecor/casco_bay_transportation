@@ -43,44 +43,24 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			'_frontpage' => '1',
 			// 'blog_count'=>'3',
 			// 'upload_image_favicon'=>'',
-			// 'custom_css'=>'',
-			'slide_image_1' => $ImageUrl,
-			// 'slide_title_1' => __('Slide Title', 'snedecor' ),
-			// 'slide_desc_1' => __('Lorem Ipsum is simply dummy text of the printing', 'weblizar' ),
-			// 'slide_btn_text_1' => __('Read More', 'weblizar' ),
-			// 'slide_btn_link_1' => '#',
-			'slide_image_2' => $ImageUrl2,
-			// 'slide_title_2' => __('variations of passages', 'weblizar' ),
-			// 'slide_desc_2' => __('Contrary to popular belief, Lorem Ipsum is not simply random text', 'weblizar' ),
-			// 'slide_btn_text_2' => __('Read More', 'weblizar' ),
-			// 'slide_btn_link_2' => '#',
-			'slide_image_3' => $ImageUrl3,
-			// 'slide_title_3' => __('Contrary to popular ', 'weblizar' ),
-			// 'slide_desc_3' => __('Aldus PageMaker including versions of Lorem Ipsum, rutrum turpi', 'weblizar' ),
-			// 'slide_btn_text_3' => __('Read More', 'weblizar' ),
-			// 'slide_btn_link_3' => '#',
-			// // Footer Call-Out
-			// 'fc_home'=>'1',
-			// 'fc_title' => __('Lorem Ipsum is simply dummy text of the printing and typesetting industry. ', 'weblizar' ),
-			// 'fc_btn_txt' => __('More Features', 'weblizar' ),
-			// 'fc_btn_link' =>"#",
-			// 'fc_icon' => 'fa fa-thumbs-up',
-			// //Social media links
-			// 'header_social_media_in_enabled'=>'1',
-			// 'footer_section_social_media_enbled'=>'1',
-			// 'twitter_link' =>"#",
-			// 'fb_link' =>"#",
-			// 'linkedin_link' =>"#",
-			// 'youtube_link' =>"#",
-			// 'instagram' =>"#",
-			// 'gplus' =>"#",
 
-			// 'email_id' => 'example@mymail.com',
-			// 'phone_no' => '0159753586',
-			// 'footer_customizations' => __(' &#169; 2016 Enigma', 'weblizar' ),
-			// 'developed_by_text' => __('Theme Developed By', 'Cori Snedecor' ),
-			// 'developed_by_weblizar_text' => __('Weblizar Themes', 'weblizar' ),
-			// 'developed_by_link' => 'http://weblizar.com/',
+			// Header slider
+			'slide_image_1' => $ImageUrl,
+			'slide_image_2' => $ImageUrl2,
+			'slide_image_3' => $ImageUrl3,
+
+			//Social media links
+			'footer_section_social_media_enabled'=>'1',
+			'twitter_link' =>"",
+			'fb_link' =>"https://www.facebook.com/pages/Casco-Bay-Transportation/155145887857969?rf=405851686275269",
+			'linkedin_link' =>"",
+
+			'email_id' => 'example@mymail.com',
+			'phone_no' => '(207)710-2323',
+			'footer_customizations' => __(' &#169; 2016 Casco Bay Transportation', 'snedecor' ),
+			'developed_by_text' => __('Theme Developed By', 'Cori Snedecor' ),
+			'developed_by_snedecor_text' => __('Cori Snedecor', 'snedecor' ),
+			'developed_by_link' => 'http://maine-websites.com/',
 			'service_home'=>'1',
 			'home_service_heading' => __('Our Services', 'snedecor' ),
 			'service_1_title'=>__("FlatBeds for Heavy and Oversize Loads",'snedecor' ),
@@ -96,34 +76,7 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			'service_3_title'=>__("Looking for Experienced Drivers", 'snedecor' ),
 			'service_3_icons'=>"fa-road",
 			'service_3_text'=>__(" ", 'snedecor' ),
-			'service_3_link'=>"#",
-
-			// //Portfolio Settings:
-			// 'portfolio_home'=>'1',
-			// 'port_heading' => __('Recent Works', 'weblizar' ),
-			// 'port_1_img'=> $ImageUrl4,
-			// 'port_1_title'=>__('Bonorum', 'weblizar' ),
-			// 'port_1_link'=>'#',
-			// 'port_2_img'=> $ImageUrl5,
-			// 'port_2_title'=>__('Content', 'weblizar' ),
-			// 'port_2_link'=>'#',
-			// 'port_3_img'=> $ImageUrl6,
-			// 'port_3_title'=>__('dictionary', 'weblizar' ),
-			// 'port_3_link'=>'#',
-			// 'port_4_img'=> $ImageUrl7,
-			// 'port_4_title'=>__('randomised', 'weblizar' ),
-			// 'port_4_link'=>'#',
-			// //BLOG Settings
-			// 'show_blog' => '1',
-			// 'blog_title'=>__('Latest Blog', 'weblizar' ),
-
-			// //Google font style
-			// 'main_heading_font' => 'Open Sans',
-			// 'menu_font' => 'Open Sans',
-			// 'theme_title' => 'Open Sans',
-			// 'desc_font_all' => 'Open Sans'
-
-
+			'service_3_link'=>"#"
 		);
 		return apply_filters( 'casco_options', $cs_theme_options );
 }

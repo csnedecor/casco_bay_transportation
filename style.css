@@ -508,17 +508,17 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: green;
 }
 
 a:visited {
-	color: purple;
+	color: green;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: green;
 }
 
 a:focus {
@@ -905,6 +905,20 @@ object {
 /*=======================================*/
 /* General Theme stylse*/
 /*=======================================*/
+h1{
+	font-weight: normal;
+	color: #666;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+.row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
 .casco_heading_title {
 	display: block;
 	margin: 0px 0 50px;
@@ -941,6 +955,7 @@ p.site-description{
 	width: 100%;
 	position: relative;
 	background-color: green;
+	clear: both;
 }
 #header_shadow{
 	background: url('../casco-bay-transportation/images/shadow.png') no-repeat top center;
@@ -951,6 +966,45 @@ p.site-description{
 	height: 20px;
 	z-index: 99;
 	width: 100%;
+}
+.head-contact-info{
+	display: block;
+	text-align: right;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:0;
+}
+.head-contact-info li {
+	display: inline;
+	margin-right:10px;
+	font-size:18px;
+
+}
+.head-contact-info li a{color:#111111;}
+.head-contact-info i {
+	margin-right:8px;
+	font-size:20px;
+	display: inline;
+}
+.logo{
+	text-align:left;
+	padding-bottom:0px;
+	font-family: 'Open Sans', sans-serif;
+}
+.logo a{
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom:10px;
+	font-size: 50px;
+	color: #fff;
+}
+.logo a:hover{
+	color: #fff;
+}
+.logo p{
+	font-family: 'Open Sans', sans-serif;
+	margin-top:5px;
+	color: #fff;
 }
 .navbar-default{
 	background-color: transparent;
@@ -1146,4 +1200,743 @@ p.site-description{
 	color: green;
 	background-size: 100% 200%;
 	background-image: linear-gradient(to bottom, #fff 50%, green 50%);
- }
+}
+/*===============================================*/
+/* Footer */
+/*==============================================*/
+
+.casco_footer_area{
+    padding: 10px 0 0px;
+}
+.casco_footer_area p {
+   font-family: 'Open Sans', sans-serif;
+	line-height: 20px;
+    font-size: 13px;
+    bottom:0;
+	text-align:center;
+	padding-top:12px;
+}
+
+.casco_footer_area p {
+	color: #f2f2f2;
+	font-size:15px;
+}
+.casco_footer_area p span{
+	color: #fa504b;
+}
+.casco_footer_area p a {
+    color: #000000;
+}
+.casco_footer_area p a:hover {
+    color: #ffffff;
+}
+.casco_footer_copyright_info{
+	float:left;
+}
+.casco_footer_social_div{
+	float:right;
+}
+.casco_footer_area{
+	background: green;
+	border-top: 0px solid #6B6B6B;
+}
+.social{
+	display: block;
+	text-align: right;
+	padding-top:5px;
+	padding-bottom:5px;
+
+}
+.social li{
+	font-size:18px;
+	-webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.6);
+	display: inline-block;
+	height: 35px;
+	margin-right: 5px;
+	width: 35px;
+	text-align: center;
+	-webkit-transition: background .5s ease-in-out;
+	-moz-transition: background .5s ease-in-out;
+	-o-transition: background .5s ease-in-out;
+	-ms-transition: background .5s ease-in-out;
+	transition: background .5s ease-in-out;
+	border: 2px solid #ffffff;
+	cursor:pointer;
+}
+.social i  {
+	color:#fff;
+	line-height:30px;
+}
+/* facebook */
+.social li.facebook{
+	background-size: 100% 200%;
+	background-image: linear-gradient(to bottom, transparent 50%, #4C66A4 50%);
+}
+.social li.facebook:hover{
+	background-position: 0 -100%;
+	background-color:#4C66A4;
+}
+
+/* twitter */
+.social li.twitter{
+	background-size: 100% 200%;
+	background-image: linear-gradient(to bottom, transparent 50%, #f60 50%);
+}
+.social li.twitter:hover{
+	background-position: 0 -100%;
+	background-color:#f60;
+}
+/* linkedin */
+.social li.linkedin{
+	background-size: 100% 200%;
+	background-image: linear-gradient(to bottom, transparent 50%, #069 50%);
+}
+.social li.linkedin:hover{
+	background-position: 0 -100%;
+	background-color:#069;
+}
+
+/*================================================*/
+/* Scroll To Top */
+/*================================================*/
+.casco_scrollup {
+    width: 45px;
+    height: 40px;
+    opacity: 0.5;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    display: none;
+	border-radius: 2px;
+    text-align: center;
+    color: green;
+    font-size: 25x;
+    background: #3b3b3b;
+    z-index: 9999;
+	-webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+.casco_scrollup i {
+  line-height: 38px;
+	font-size: 24px;
+	vertical-align:middle;
+}
+.casco_scrollup:hover{
+	opacity: 0.8;
+}
+a.casco_scrollup:hover i, a.casco_scrollup:focus i {
+    text-decoration: none;
+    color: green;
+    outline: none;
+}
+
+
+/*==================================================*/
+/* Responsive Styles */
+/*================================================*/
+@media (min-width:1200px) {
+	.navbar {
+	margin-bottom: 0px;
+	}
+	#casco_nav_top.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+		border-bottom: 2px solid #F7F5F5;
+		z-index: 9999;
+	}
+	.carousel-caption {
+	top: 25%;
+	}
+	.boxed .carousel-caption {
+	top: 20%;
+	}
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+	#casco_nav_top.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+	border-bottom: 2px solid #F7F5F5;
+	z-index: 99997;
+	left: 0;
+	}
+
+}
+
+/* This Media screen css called for All Hc Pages Element---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 960px) and (max-width: 1200px) {
+
+	.casco_gallery_page .col-md-3{
+		width:25%;
+	}
+	.post-content-wrap {
+		width:83%;
+	}
+	.post-content-wrap-right {
+		width:83%;
+	}
+	.navbar {
+	margin-bottom: 0px;
+
+	}
+	#casco_nav_top.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+	border-bottom: 2px solid #F7F5F5;
+	z-index: 99997;
+	left: 0;
+	}
+	.casco_gallery_blog{
+	width: 33.3%;
+	margin-right: 0;
+	margin-bottom: 0;
+	float: left;
+	}
+
+}
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+.logo{
+	text-align:center;
+	padding-top:15px;
+	padding-bottom:0px;
+	}
+	.head-contact-info{
+	display: block;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:0;
+}
+
+	.social{
+	display: block;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: 0px;
+	}
+	.navbar-default .navbar-nav > li > a{
+	color: #ffffff;
+	border-radius: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-transform: uppercase;
+	font-family: 'Arimo',Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	font-size:15px;
+	}
+	.navbar {
+		margin-bottom: 0px;
+
+	}
+	#casco_nav_top.affix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+	border-bottom: 2px solid #F7F5F5;
+	z-index: 99997;
+	left: 0;
+	}
+	.carousel-caption{
+	top:40px;
+	}
+	.carousel-text h1 {
+	font-size: 1.4em;
+	padding:10px;
+	}
+	.carousel-list li {
+	color: #fff;
+	font-size: 0.9em;
+	margin-bottom: 10px;
+	overflow: hidden;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	text-transform: uppercase;
+	}
+	.carousel-list {
+	top: 60px;
+	margin: 0px auto;
+	}
+
+	/*** blog full width **/
+	.casco_sidebar_left_side{
+
+	float:none;
+
+	}
+	.casco_blog_right_side{
+	float:none;
+	}
+	.post-content-wrap {
+	width:100%;
+	}
+	.post-content-wrap-right {
+	width:100%;
+	}
+	.blog-date-left{
+		display:flex;
+		margin-bottom: 0px;
+	}
+	.blog-date-right{
+		display:flex;
+		margin-bottom: 0px;
+	}
+
+	.casco_fuul_blog_detail_padding {
+		padding-left: 0px;
+		padding-top:20px;
+	}
+	.casco_blog_full .casco_blog_thumb_wrapper_showcase {
+		margin-bottom: 0px;
+	}
+	.navbar-collapse {
+     max-height: none;
+	 }
+	 .casco_project_section .caroufredsel_wrapper{
+		height: 350px !important;
+	 }
+	 .casco_client_area .caroufredsel_wrapper{
+		height: 250px !important;
+	 }
+	 .casco_project_detail_related_projet .caroufredsel_wrapper{
+		height: 350px !important;
+	 }
+	 /** casco footer  copyright area ***/
+	 .casco_footer_area{
+	 text-align:center;
+	 }
+	 .casco_footer_copyright_info{
+		float:none;
+	}
+	.casco_footer_social_div{
+		float:none;
+	}
+	/** contact us page **/
+	.casco_contact_form_fields{
+	padding-right: 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-right: 0px solid #E5E5E5;
+	}
+	.casco_contact_info{
+		padding-left: 15px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	/* gallery */
+	.casco_gallery_blog{
+	width: 33.3%;
+	margin-right: 0;
+	margin-bottom: 0;
+	float: left;
+	}
+	.carousel-indicators{
+		display:none;
+	}
+	.carousel-text .casco_blog_read_btn{
+		display:none;
+	}
+	.carousel-caption {
+	top: 20%;
+	}
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.dropdown-menu{
+width:100%;
+float:none;
+position:static !important;
+}
+.logo{
+	text-align:center;
+	padding-top:15px;
+	padding-bottom:0px;
+	}
+	.head-contact-info{
+	display: block;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:0;
+}
+	.social{
+	display: block;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: 0px;
+	}
+	.carousel-caption{
+	top:15px;
+	}
+	.carousel-text h1 {
+	font-size: 1.2em;
+	padding:10px;
+	}
+	.carousel-list li {
+	color: #fff;
+	font-size: 12px;
+	line-height:16px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	font-family: 'Abel',sans-serif;
+	text-transform: uppercase;
+	}
+	.carousel-list {
+	top: 60px;
+	margin: 0px auto;
+	}
+
+	/**** blog full width: ***/
+	.casco_sidebar_left_side{
+
+		float:none;
+
+	}
+	.casco_blog_right_side{
+		float:none;
+	}
+
+	.post-content-wrap {
+	width:100%;
+	}
+	.post-content-wrap-right {
+	width:100%;
+	}
+	.blog-date-left{
+		display:flex;
+		margin-bottom: 0px;
+	}
+	.blog-date-right{
+		display:flex;
+		margin-bottom: 0px;
+	}
+	.casco_fuul_blog_detail_padding {
+		padding-left: 0px;
+		padding-top:20px;
+	}
+	.casco_blog_full .casco_blog_thumb_wrapper_showcase {
+		margin-bottom: 0px;
+	}
+	.navbar-collapse {
+     max-height: none;
+	 }
+
+	/*** comment section **/
+	.casco_comment_box .media-body {
+	float: left;
+	}
+	/** casco footer  copyright area ***/
+	 .casco_footer_area{
+	 text-align:center;
+	 }
+	 .casco_footer_copyright_info{
+		float:none;
+	}
+	.casco_footer_social_div{
+		float:none;
+	}
+	/** contact us page **/
+	.casco_contact_form_fields{
+	padding-right: 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-right: 0px solid #E5E5E5;
+	}
+	.casco_contact_info{
+		padding-left: 15px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	/* gallery */
+	.casco_gallery_blog{
+	width: 49.9%;
+	margin-right: 0;
+	margin-bottom: 0;
+	float: left;
+	}
+	.carousel-indicators{
+		display:none;
+	}
+	.carousel-text .casco_blog_read_btn{
+		display:none;
+	}
+	.carousel-caption {
+	top: 20%;
+	}
+}
+
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+.casco_img_responsive{
+	width: 100%;
+}
+.dropdown-menu{
+width:100%;
+float:none;
+position:static !important;
+}
+	/*.carousel-list li {	display:none; } */
+.carousel-text h1 {
+	margin: 0 0 0px 0;
+	padding: 5px;
+	font-size: 7px;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	line-height: .line-height: 8px;
+}
+.carousel-text .casco_blog_read_btn {
+	font-size: 7px;
+	display: inline-block;
+	padding: 3px;
+}
+
+
+.carousel-list li {
+	font-size: 7px;
+	overflow: hidden;
+	padding: 5px;
+	line-height: 8px;
+	display: block;
+	color: #fff;
+	font-size: 8px;
+	line-height:8px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	font-family: 'Abel',sans-serif;
+	text-transform: uppercase;
+}
+	/*** blog full width **/
+	.casco_sidebar_left_side{
+		float:none;
+	}
+	.casco_blog_right_side{
+		float:none;
+	}
+	.blog-date-left{
+		display:flex;
+		margin-bottom: 0px;
+	}
+	.blog-date-right{
+		display:flex;
+		margin-bottom: 0px;
+	}
+	.post-content-wrap {
+	width:100%;
+	}
+	.post-content-wrap-right {
+	width:100%;
+	}
+	.casco_fuul_blog_detail_padding {
+		padding-left: 0px;
+		padding-top:20px;
+	}
+	.casco_blog_full .casco_blog_thumb_wrapper_showcase {
+		margin-bottom: 0px;
+	}
+	.navbar-collapse {
+     max-height: none;
+	 }
+	 /** casco footer  copyright area ***/
+	 .casco_footer_area{
+	 text-align:center;
+	 }
+	 .casco_footer_copyright_info{
+		float:none;
+	}
+	.casco_footer_social_div{
+		float:none;
+	}
+	/** contact us page **/
+	.casco_contact_form_fields{
+		padding-right: 15px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		border-right: 0px solid #E5E5E5;
+	}
+	.casco_contact_info{
+		padding-left: 15px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.carousel-indicators{
+		display:none;
+	}
+}
+@media only screen and (min-width: 480px) and (max-width: 600px) {
+	 .carousel-indicators{
+		display:none;
+	}
+
+}
+@media only screen and (min-width: 200px) and (max-width: 480px) {
+  .head-contact-info li {
+  float: left;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.logo{
+	text-align:center;
+	padding-top:15px;
+	padding-bottom:0px;
+	}
+	.head-contact-info{
+	display: block;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:2px;
+	padding-left:0;
+	}
+	.social{
+	display: block;
+	text-align: center;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left: 0px;
+	}
+	.carousel-text h1 {
+	margin-top: -10px;
+	font-size: 0.8em;
+	}
+	/* .carousel-list li {	display:none;	} */
+	.carousel-list li {
+	color: #fff;
+	font-size: 8px;
+	line-height:8px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	font-family: 'Abel',sans-serif;
+	text-transform: uppercase;
+	}
+
+	.carousel-caption{
+	top:10px;
+	}
+	.carousel-indicators{
+		display:none;
+	}
+	.casco_sidebar_left_side{
+
+	float:none;
+
+	}
+	.casco_blog_right_side{
+	float:none;
+	}
+	/** blog full width ***/
+
+	.post-content-wrap {
+	width:100%;
+	}
+	.post-content-wrap-right {
+	width:100%;
+	}
+
+	.blog-date-left{
+		display:flex;
+		margin-bottom: 0px;
+	}
+	.blog-date-left li{
+		width:60px;
+		height:60px;
+	}
+
+	.blog-date-right{
+		display:flex;
+		margin-bottom: 0px;
+	}
+	.blog-date-right li{
+		width:60px;
+		height:60px;
+	}
+	.casco_post_date {
+		padding-top: 6px;
+		padding-left:2px;
+		padding-right:2px;
+		padding-bottom: 4px;
+	}
+	.casco_post_date span.date {
+		font-size: 30px;
+		line-height: 25px;
+	}
+	.casco_post_date h6 {
+		font-size: 10px;
+		line-height: 10px;
+		margin-top: 4px;
+	}
+	.casco_post_author img {
+		height: 60px !important;
+	}
+
+	.casco_blog_comment{
+		width: 60px;
+		padding-top: 6px;
+		padding-left:2px;
+		padding-right:2px;
+		padding-bottom: 6px;
+	}
+	.casco_blog_comment a{
+		color:#999999;
+	}
+	.casco_blog_comment i{
+		font-size: 30px;
+		line-height: 25px;
+
+
+	}
+	.casco_blog_comment h6{
+		font-size:12px;
+		margin-top:4px;
+
+	}
+	.casco_fuul_blog_detail_padding {
+		padding-left: 0px;
+		padding-top:20px;
+	}
+	.casco_blog_full .casco_blog_thumb_wrapper_showcase {
+		margin-bottom: 0px;
+	}
+		.navbar-collapse {
+     max-height: none;
+	 }
+	.casco_client_area .caroufredsel_wrapper{
+		height: 300px !important;
+	}
+
+	/*** comment section **/
+	.casco_comment_box .media-body {
+	float: left;
+	}
+	/** casco footer  copyright area ***/
+	 .casco_footer_area{
+	 text-align:center;
+	 }
+	 .casco_footer_copyright_info{
+		float:none;
+	}
+	.casco_footer_social_div{
+		float:none;
+	}
+	/* gallery */
+	.casco_gallery_blog{
+	width: 100%;
+	margin-right: 0;
+	margin-bottom: 0;
+	float: left;
+	}
+	.carousel-text .casco_blog_read_btn{
+		display:none;
+	}
+}
+

@@ -396,6 +396,107 @@ function snedecor_gl_customizer( $wp_customize ){
             'type'     => 'line'
         )
     ));
+
+  /*****************************************************/
+  // Social Icons
+  /*****************************************************/
+
+  $wp_customize->add_section('social_section',array(
+    'title'=>__("Social Options",'snedecor'),
+    'capability'=>'edit_theme_options',
+    'priority' => 35
+  ));
+
+  $wp_customize->add_setting(
+  'casco_options[footer_section_social_media_enabled]',
+    array(
+    'default'=>esc_attr($cs_theme_options['footer_section_social_media_enabled']),
+    'type'=>'option',
+    'sanitize_callback'=>'casco_sanitize_checkbox',
+    'capability'=>'edit_theme_options'
+    )
+  );
+  $wp_customize->add_control( 'footer_section_social_media_enabled', array(
+    'label'        => __( 'Enable Social Media Icons in Footer', 'snedecor' ),
+    'type'=>'checkbox',
+    'section'    => 'social_section',
+    'settings'   => 'casco_options[footer_section_social_media_enabled]'
+  ) );
+  $wp_customize->add_setting(
+  'casco_options[email_id]',
+    array(
+    'default'=>esc_attr($cs_theme_options['email_id']),
+    'type'=>'option',
+    'sanitize_callback'=>'sanitize_email',
+    'capability'=>'edit_theme_options'
+    )
+  );
+  $wp_customize->add_control( 'email_id', array(
+    'label'        =>  __('Email ID', 'weblizar' ),
+    'type'=>'email',
+    'section'    => 'social_section',
+    'settings'   => 'casco_options[email_id]'
+  ) );
+  $wp_customize->add_setting(
+  'casco_options[phone_no]',
+    array(
+    'default'=>esc_attr($cs_theme_options['phone_no']),
+    'type'=>'option',
+    'sanitize_callback'=>'casco_sanitize_text',
+    'capability'=>'edit_theme_options'
+    )
+  );
+  $wp_customize->add_control( 'phone_no', array(
+    'label'        =>  __('Phone Number', 'snedecor' ),
+    'type'=>'text',
+    'section'    => 'social_section',
+    'settings'   => 'casco_options[phone_no]'
+  ) );
+  $wp_customize->add_setting(
+  'casco_options[twitter_link]',
+    array(
+    'default'=>esc_attr($cs_theme_options['twitter_link']),
+    'type'=>'option',
+    'sanitize_callback'=>'esc_url_raw',
+    'capability'=>'edit_theme_options'
+    )
+  );
+  $wp_customize->add_control( 'twitter_link', array(
+    'label'        =>  __('Twitter', 'snedecor' ),
+    'type'=>'url',
+    'section'    => 'social_section',
+    'settings'   => 'casco_options[twitter_link]'
+  ) );
+  $wp_customize->add_setting(
+  'casco_options[fb_link]',
+    array(
+    'default'=>esc_attr($cs_theme_options['fb_link']),
+    'type'=>'option',
+    'sanitize_callback'=>'esc_url_raw',
+    'capability'=>'edit_theme_options'
+    )
+  );
+  $wp_customize->add_control( 'fb_link', array(
+    'label'        => __( 'Facebook', 'snedecor' ),
+    'type'=>'url',
+    'section'    => 'social_section',
+    'settings'   => 'casco_options[fb_link]'
+  ) );
+  $wp_customize->add_setting(
+  'casco_options[linkedin_link]',
+    array(
+    'default'=>esc_attr($cs_theme_options['linkedin_link']),
+    'type'=>'option',
+    'sanitize_callback'=>'esc_url_raw',
+    'capability'=>'edit_theme_options'
+    )
+  );
+    $wp_customize->add_control( 'linkedin_link', array(
+    'label'        => __( 'LinkedIn', 'social_media_incredible' ),
+    'type'=>'url',
+    'section'    => 'social_section',
+    'settings'   => 'casco_options[linkedin_link]'
+  ) );
 }
 add_action( 'customize_register', 'snedecor_gl_customizer');
 
