@@ -41,8 +41,6 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			'height'=>'55',
 			'width'=>'150',
 			'_frontpage' => '1',
-			// 'blog_count'=>'3',
-			// 'upload_image_favicon'=>'',
 
 			// Header slider
 			'slide_image_1' => $ImageUrl,
@@ -55,7 +53,7 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			'fb_link' =>"https://www.facebook.com/pages/Casco-Bay-Transportation/155145887857969?rf=405851686275269",
 			'linkedin_link' =>"",
 
-			'email_id' => 'example@mymail.com',
+			'email_id' => '',
 			'phone_no' => '(207)710-2323',
 			'footer_customizations' => __(' &#169; 2016 Casco Bay Transportation', 'snedecor' ),
 			'developed_by_text' => __('Theme Developed By', 'Cori Snedecor' ),

@@ -269,7 +269,6 @@ textarea {
 	color: #404040;
 	font-family: sans-serif;
 	font-size: 16px;
-	font-size: 1rem;
 	line-height: 1.5;
 }
 
@@ -280,6 +279,10 @@ h4,
 h5,
 h6 {
 	clear: both;
+	color: #666;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
 }
 
 p {
@@ -987,8 +990,10 @@ p.site-description{
 	display: inline;
 }
 .logo{
-	text-align:left;
-	padding-bottom:0px;
+	text-align: left;
+	padding-bottom: 0px;
+	display: inline-block;
+	float: left;
 	font-family: 'Open Sans', sans-serif;
 }
 .logo a{
@@ -1024,6 +1029,9 @@ p.site-description{
 .navbar-default .navbar-nav li a{
 	font-family: 'Arimo', Arial, Helvetica, sans-serif;
 	font-size: 15px;
+}
+.navbar-default .navbar-nav li.current-menu-item.current_page_item{
+	font-weight: bold;
 }
 .navbar-default .navbar-nav > li > a{
 	border-radius: 5px;
@@ -1332,7 +1340,86 @@ a.casco_scrollup:hover i, a.casco_scrollup:focus i {
     outline: none;
 }
 
-
+/*==================================================*/
+/* Pages */
+/*==================================================*/
+img.casco_img_responsive{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: auto;
+}
+.casco_blog_full .casco_blog_thumb_wrapper_showcase{
+	margin-bottom: 20px;
+	position: relative;
+	padding: 0px;
+	width: 100%;
+	overflow: hidden;
+}
+.casco_blog_full{
+	margin-bottom: 20px;
+	margin-top: 10px;
+	overflow: hidden;
+	padding: 0px;
+	float: none;
+}
+.casco_blog_post_content{
+	float: left;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.casco_blog_post_content p{
+	color: #777777;
+	font-size: 16px;
+	line-height: 27px;
+	margin: 0 0 20px;
+	font-family: 'Open Sans', sans-serif;
+}
+.blog-sep.header-sep{
+	margin-top: 40px;
+	margin-bottom: 50px;
+}
+.header-sep{
+	border: 0;
+	height: 4px;
+	color: #f5f5f5;
+	background-color: #f5f5f5;
+}
+.casco_sidebar_widget{
+	border-left: 3px solid green;
+	border-right: 3px solid green;
+	border-bottom: 3px solid green;
+	background-color: #ffffff;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	overflow: hidden;
+	box-shadow: 0 0 6px rgba(0, 0, 0, .7);
+	padding: 0px 20px 15px 20px;
+}
+.casco_sidebar .input-group{
+	max-width: 100%;
+}
+.input-group{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#searchform .form-control{
+	display: block;
+	width: 100%;
+	height: 45px;
+	padding: 6px 12px;
+	font-size: 13px;
+}
+.input-group-btn{
+	display: inherit;
+}
+#searchform .btn{
+	font-size: 18px;
+	font-weight: normal;
+	height: 45px;
+	width: 62px;
+}
 /*==================================================*/
 /* Responsive Styles */
 /*================================================*/
@@ -1405,13 +1492,13 @@ a.casco_scrollup:hover i, a.casco_scrollup:focus i {
 	text-align:center;
 	padding-top:15px;
 	padding-bottom:0px;
-	}
-	.head-contact-info{
-	display: block;
-	text-align: center;
-	padding-top:5px;
-	padding-bottom:2px;
-	padding-left:0;
+}
+.head-contact-info{
+	text-align: right;
+	float: right;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	padding-left: 0;
 }
 
 	.social{
@@ -1430,7 +1517,6 @@ a.casco_scrollup:hover i, a.casco_scrollup:focus i {
 	padding-right: 8px;
 	text-transform: uppercase;
 	font-family: 'Arimo',Arial, Helvetica, sans-serif;
-	font-weight: 600;
 	font-size:15px;
 	}
 	.navbar {

@@ -432,7 +432,7 @@ function snedecor_gl_customizer( $wp_customize ){
     )
   );
   $wp_customize->add_control( 'email_id', array(
-    'label'        =>  __('Email ID', 'weblizar' ),
+    'label'        =>  __('Email ID', 'snedecor' ),
     'type'=>'email',
     'section'    => 'social_section',
     'settings'   => 'casco_options[email_id]'

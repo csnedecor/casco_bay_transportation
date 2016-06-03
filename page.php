@@ -13,26 +13,32 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<div class="container">
+	<div class="row casco_blog_wrapper">
+		<div class="col-md-12">
+			<?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
+				<div class="casco_blog_full">
+					<?php  if(has_post_thumbnail()):
+							$defalt_arg = array('class' => "casco_img_responsive");
+							?>
+							<div class="casco_blog_thumb_wrapper_showcase">
+								<div class="casco_blog-img">
+								<?php the_post_thumbnail('cs_page_thumb',$defalt_arg); ?>
+								</div>
+							</div>
+							<?php endif; ?>
+							<div class="casco_blog_post_content">
+								<?php the_content( __( 'Read More' , 'snedecor' ) ); ?>
+							</div>
+					</div>
+					<div class="push-right">
+						<hr class="blog-sep header-sep">
+					</div>
+					<?php comments_template( '', true ); ?>
+					<?php
+					endwhile;
+				endif; ?>
+			</div>
+		</div>
+	</div>
+<?php get_footer(); ?>
