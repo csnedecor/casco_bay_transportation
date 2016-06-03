@@ -189,6 +189,24 @@ function casco_bay_transportation_widgets_init() {
 }
 add_action( 'widgets_init', 'casco_bay_transportation_widgets_init' );
 
+/***
+*--- Navigation for Single ---*
+**/
+
+function snedecor_navigation_posts() { ?>
+	<div class="navigation_en">
+		<nav id="snedecor_nav">
+			<span class="nav-previous">
+				<?php previous_post_link('&laquo; %link'); ?>
+			</span>
+			<span class="nav-next">
+				<?php next_post_link('%link &raquo;'); ?>
+			</span>
+		</nav>
+	</div>
+<?php
+	}
+
 /**
  * Enqueue scripts and styles.
  */

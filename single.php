@@ -1,35 +1,17 @@
-<?php
-/**
- * The template for displaying all single posts.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Casco_Bay_Transportation
- */
-
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php
-		while ( have_posts() ) : the_post();
-
-			get_template_part( 'template-parts/content', get_post_format() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_header(); ?>
+<div class="container">
+	<div class="row casco_blog_wrapper">
+	<div class="col-md-8">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<?php get_template_part( 'template-parts/content', get_post_format() );
+		endwhile;
+		else :
+			get_template_part('nocontent');
+		endif;
+		snedecor_navigation_posts();
+		comments_template( '', true ); ?>
+	</div>
+	<?php get_sidebar(); ?>
+	</div> <!-- row div end here -->
+</div><!-- container div end here -->
+<?php get_footer(); ?>
