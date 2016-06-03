@@ -1420,6 +1420,24 @@ img.casco_img_responsive{
 	height: 45px;
 	width: 62px;
 }
+.casco_send_button , #casco_send_button{
+	font-weight: 600;
+	font-family: 'Open Sans', sans-serif;
+	display: inline-block;
+	padding: 15px 40px;
+	margin-bottom: 0;
+	font-size: 18px;
+
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	background-image: none;
+	border: 2px solid transparent;
+	transition: all 0.4s ease;
+
+}
 /*==================================================*/
 /* Responsive Styles */
 /*================================================*/
