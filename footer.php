@@ -13,26 +13,41 @@
 <div class="casco_footer_area">
     <div class="container">
       <div class="col-md-12">
-      <p class="casco_footer_copyright_info cs_rtl" >
-      <?php if($cs_theme_options['footer_customizations']) {
-        echo esc_attr($cs_theme_options['footer_customizations']);
-      } ?>
-      <?php if($cs_theme_options['footer_section_social_media_enabled'] == '1') { ?>
-      <div class="casco_footer_social_div">
-        <ul class="social">
-          <?php if($cs_theme_options['fb_link']!='') { ?>
-             <li class="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><a  href="<?php echo esc_url($cs_theme_options['fb_link']); ?>"><i class="fa fa-facebook"></i></a></li>
-          <?php } if($cs_theme_options['twitter_link']!='') { ?>
-            <li class="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><a href="<?php echo esc_url($cs_theme_options['twitter_link']) ; ?>"><i class="fa fa-twitter"></i></a></li>
-          <?php } if($cs_theme_options['linkedin_link']!='') { ?>
-            <li class="linkedin" data-toggle="tooltip" data-placement="top" title="Linkedin"><a href="<?php echo esc_url($cs_theme_options['linkedin_link']) ; ?>"><i class="fa fa-linkedin"></i></a></li>
-          <?php } ?>
-        </ul>
+      <div class="logo">
+        <a href="<?php echo esc_url(home_url( '/' )); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+          <?php
+          if($cs_theme_options['upload_image_logo']){ ?>
+            <img class="img-responsive" src="<?php echo $cs_theme_options['upload_image_logo']; ?>" style="height:<?php if($cs_theme_options['height']!='') { echo $cs_theme_options['height']; }  else { "80"; } ?>px; width:<?php if($cs_theme_options['width']!='') { echo $cs_theme_options['width']; }  else { "200"; } ?>px;" />
+          <?php } else {
+            echo get_bloginfo('name');
+          } ?>
+        </a>
+        <?php
+          $description = get_bloginfo( 'description', 'display' );
+          if ( $description || is_customize_preview() ) : ?>
+          <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+        <?php
+        endif; ?>
       </div>
+      <?php if($cs_theme_options['email_id'] || $cs_theme_options['address'] || $cs_theme_options['phone_no'] !='') { ?>
+        <ul class="foot">
+          <?php if($cs_theme_options['email_id'] !='') { ?><li><i class="fa fa-envelope"></i><a href="mailto:<?php echo $cs_theme_options['email_id']; ?>"><?php echo esc_attr($cs_theme_options['email_id']); ?></a></li><?php } ?>
+          <?php if($cs_theme_options['address'] !='') { ?><li><i class="fa fa-home"></i><?php echo esc_attr($cs_theme_options['address']); ?></li><?php } ?>
+          <?php if($cs_theme_options['phone_no'] !='') { ?><li><i class="fa fa-phone"></i><a href="tel:<?php echo $cs_theme_options['phone_no']; ?>"><?php echo esc_attr($cs_theme_options['phone_no']); ?></a></li><?php } ?>
+        </ul>
       <?php } ?>
+    </div>
+  </div>
+  <div class="container">
+      <div class="col-md-12">
+        <p class="casco_footer_copyright_info cs_rtl" >
+        <?php if($cs_theme_options['footer_customizations']) {
+          echo esc_attr($cs_theme_options['footer_customizations']);
+        } ?>
+        <?php if($cs_theme_options['footer_section_social_media_enabled'] == '1') { ?>
+        <?php } ?>
       </div>
     </div>
-</div>
 <!-- /Footer Widget Secton -->
 </div>
 <a href="#" title="Go Top" class="casco_scrollup" style="display: inline;"><i class="fa fa-chevron-up"></i></a>

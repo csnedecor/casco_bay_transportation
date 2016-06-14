@@ -126,6 +126,31 @@ function snedecor_gl_customizer( $wp_customize ){
     'settings'   => 'casco_options[slide_image_3]'
   ) ) );
 
+
+/*********************************************/
+    /* Intro Text */
+/********************************************/
+  $wp_customize->add_section('intro_section',array(
+    'title'=>__("Introduction",'snedecor'),
+    'capability'=>'edit_theme_options',
+    'priority' => 35,
+    'active_callback' => 'is_front_page',
+  ));
+  $wp_customize->add_setting(
+    'casco_options[intro_text]',
+    array(
+    'default'=>esc_attr($cs_theme_options['intro_text']),
+    'type'=>'option',
+    'sanitize_callback'=>'casco_sanitize_text',
+    'capability'=>'edit_theme_options',
+      )
+  );
+  $wp_customize->add_control( 'intro_text', array(
+    'label'        => __( 'Introduction Text', 'snedecor' ),
+    'type'=>'text',
+    'section'    => 'intro_section',
+    'settings'   => 'casco_options[intro_text]'
+  ) );
 /*********************************************/
     /* Service Options */
 /********************************************/
@@ -402,7 +427,7 @@ function snedecor_gl_customizer( $wp_customize ){
   /*****************************************************/
 
   $wp_customize->add_section('social_section',array(
-    'title'=>__("Social Options",'snedecor'),
+    'title'=>__("Contact Information",'snedecor'),
     'capability'=>'edit_theme_options',
     'priority' => 35
   ));
@@ -466,51 +491,6 @@ function snedecor_gl_customizer( $wp_customize ){
     'type'=>'text',
     'section'    => 'social_section',
     'settings'   => 'casco_options[phone_no]'
-  ) );
-  $wp_customize->add_setting(
-  'casco_options[twitter_link]',
-    array(
-    'default'=>esc_attr($cs_theme_options['twitter_link']),
-    'type'=>'option',
-    'sanitize_callback'=>'esc_url_raw',
-    'capability'=>'edit_theme_options'
-    )
-  );
-  $wp_customize->add_control( 'twitter_link', array(
-    'label'        =>  __('Twitter', 'snedecor' ),
-    'type'=>'url',
-    'section'    => 'social_section',
-    'settings'   => 'casco_options[twitter_link]'
-  ) );
-  $wp_customize->add_setting(
-  'casco_options[fb_link]',
-    array(
-    'default'=>esc_attr($cs_theme_options['fb_link']),
-    'type'=>'option',
-    'sanitize_callback'=>'esc_url_raw',
-    'capability'=>'edit_theme_options'
-    )
-  );
-  $wp_customize->add_control( 'fb_link', array(
-    'label'        => __( 'Facebook', 'snedecor' ),
-    'type'=>'url',
-    'section'    => 'social_section',
-    'settings'   => 'casco_options[fb_link]'
-  ) );
-  $wp_customize->add_setting(
-  'casco_options[linkedin_link]',
-    array(
-    'default'=>esc_attr($cs_theme_options['linkedin_link']),
-    'type'=>'option',
-    'sanitize_callback'=>'esc_url_raw',
-    'capability'=>'edit_theme_options'
-    )
-  );
-    $wp_customize->add_control( 'linkedin_link', array(
-    'label'        => __( 'LinkedIn', 'social_media_incredible' ),
-    'type'=>'url',
-    'section'    => 'social_section',
-    'settings'   => 'casco_options[linkedin_link]'
   ) );
 }
 add_action( 'customize_register', 'snedecor_gl_customizer');

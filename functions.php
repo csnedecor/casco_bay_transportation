@@ -47,15 +47,17 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			'slide_image_2' => $ImageUrl2,
 			'slide_image_3' => $ImageUrl3,
 
+			// Intro Text
+			'intro_text'=>__("Casco Bay Transportation, LLC based in southern Maine, offers trucking and hauling and specializes in extremely heavy and oversize loads where complex logistics may be required. We understand that on-time delivery of these items is critical and we respect the many components that all need to work together for a successful outcome.   Our high reputation for difficult jobs makes Casco Bay Transportation the go-to company in New England.", 'snedecor' ),
+
 			//Social media links
 			'footer_section_social_media_enabled'=>'1',
-			'twitter_link' =>"",
-			'fb_link' =>"https://www.facebook.com/pages/Casco-Bay-Transportation/155145887857969?rf=405851686275269",
-			'linkedin_link' =>"",
 			'address'  => '102 Industrial Park Rd, Saco, ME 04072',
 			'email_id' => '',
 			'phone_no' => '(207)710-2323',
 			'footer_customizations' => __(' &#169; 2016 Casco Bay Transportation', 'snedecor' ),
+
+			// Services
 			'service_home'=>'1',
 			'home_service_heading' => __('Our Services', 'snedecor' ),
 			'service_1_title'=>__("FlatBeds for Heavy and Oversize Loads",'snedecor' ),
