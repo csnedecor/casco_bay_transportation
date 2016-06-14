@@ -14,9 +14,9 @@
     <div class="container">
       <div class="col-md-12">
       <p class="casco_footer_copyright_info cs_rtl" >
-      <?php if($cs_theme_options['footer_customizations']) { echo esc_attr($cs_theme_options['footer_customizations']); }
-      if($cs_theme_options['developed_by_text']) { echo "|" .esc_attr($cs_theme_options['developed_by_text']); } ?>
-      <a target="_blank" rel="nofollow" href="<?php if($cs_theme_options['developed_by_link']) { echo esc_url($cs_theme_options['developed_by_link']); } ?>"><?php if($cs_theme_options['developed_by_snedecor_text']) { echo esc_attr($cs_theme_options['developed_by_snedecor_text']); } ?></a></p>
+      <?php if($cs_theme_options['footer_customizations']) {
+        echo esc_attr($cs_theme_options['footer_customizations']);
+      } ?>
       <?php if($cs_theme_options['footer_section_social_media_enabled'] == '1') { ?>
       <div class="casco_footer_social_div">
         <ul class="social">
