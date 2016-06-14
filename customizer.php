@@ -438,6 +438,21 @@ function snedecor_gl_customizer( $wp_customize ){
     'settings'   => 'casco_options[email_id]'
   ) );
   $wp_customize->add_setting(
+    'casco_options[address]',
+    array(
+    'default'=>esc_attr($cs_theme_options['address']),
+    'type'=>'option',
+    'sanitize_callback'=>'sanitize_text',
+    'capability'=>'edit_theme_options'
+    )
+  );
+  $wp_customize->add_control( 'address', array(
+    'label'        =>  __('Address', 'snedecor' ),
+    'type'=>'text',
+    'section'    => 'social_section',
+    'settings'   => 'casco_options[address]'
+  ) );
+  $wp_customize->add_setting(
   'casco_options[phone_no]',
     array(
     'default'=>esc_attr($cs_theme_options['phone_no']),

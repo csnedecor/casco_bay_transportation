@@ -52,7 +52,7 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			'twitter_link' =>"",
 			'fb_link' =>"https://www.facebook.com/pages/Casco-Bay-Transportation/155145887857969?rf=405851686275269",
 			'linkedin_link' =>"",
-
+			'address'  => '102 Industrial Park Rd, Saco, ME 04072',
 			'email_id' => '',
 			'phone_no' => '(207)710-2323',
 			'footer_customizations' => __(' &#169; 2016 Casco Bay Transportation', 'snedecor' ),

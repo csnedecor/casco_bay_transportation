@@ -26,7 +26,7 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'casco-bay-transportation' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+		<div class="container site-branding">
 			<div class="logo">
 				<a href="<?php echo esc_url(home_url( '/' )); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 					<?php
@@ -43,9 +43,10 @@
 				<?php
 				endif; ?>
 			</div>
-			<?php if($cs_theme_options['email_id'] || $cs_theme_options['phone_no'] !='') { ?>
+			<?php if($cs_theme_options['email_id'] || $cs_theme_options['address'] || $cs_theme_options['phone_no'] !='') { ?>
 				<ul class="head-contact-info">
 						<?php if($cs_theme_options['email_id'] !='') { ?><li><i class="fa fa-envelope"></i><a href="mailto:<?php echo $cs_theme_options['email_id']; ?>"><?php echo esc_attr($cs_theme_options['email_id']); ?></a></li><?php } ?>
+						<?php if($cs_theme_options['address'] !='') { ?><li><i class="fa fa-home"></i><?php echo esc_attr($cs_theme_options['address']); ?></li><?php } ?>
 						<?php if($cs_theme_options['phone_no'] !='') { ?><li><i class="fa fa-phone"></i><a href="tel:<?php echo $cs_theme_options['phone_no']; ?>"><?php echo esc_attr($cs_theme_options['phone_no']); ?></a></li><?php } ?>
 				</ul>
 			<?php } ?>
