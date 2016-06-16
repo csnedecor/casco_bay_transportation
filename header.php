@@ -54,7 +54,6 @@
 		</div><!-- .site-branding -->
 		<!-- Navigation  menus -->
 		<div class="navigation_menu"  data-spy="affix" data-offset-top="95" id="casco_nav_top">
-			<span id="header_shadow"></span>
 			<div class="container navbar-container" >
 				<nav class="navbar navbar-default " role="navigation">
 					<div class="navbar-header">
