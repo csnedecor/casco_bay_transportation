@@ -960,16 +960,6 @@ p.site-description{
 	background-color: green;
 	clear: both;
 }
-#header_shadow{
-	background: url('../casco-bay-transportation/images/shadow.png') no-repeat top center;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
-	height: 20px;
-	z-index: 99;
-	width: 100%;
-}
 .head-contact-info{
 	display: block;
 	text-align: right;
@@ -1069,6 +1059,18 @@ p.site-description{
 }
 .navbar-header button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{
 	box-shadow: none;
+}
+
+/**********************************************************************************************************************************************/
+/** Intro Section  ***************************************************************************************************************
+********************************************************************************************************************************/
+.casco_intro p{
+	font-size: 16px;
+	line-height: 27px;
+}
+.casco_intro{
+	padding-top: 90px;
+	text-align: center;
 }
 
 /**********************************************************************************************************************************************/

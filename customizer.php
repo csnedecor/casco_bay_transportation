@@ -137,6 +137,21 @@ function snedecor_gl_customizer( $wp_customize ){
     'active_callback' => 'is_front_page',
   ));
   $wp_customize->add_setting(
+    'casco_options[home_intro_heading]',
+    array(
+    'default'=>esc_attr($cs_theme_options['home_intro_heading']),
+    'type'=>'option',
+    'capability'=>'edit_theme_options',
+    'sanitize_callback'=>'casco_sanitize_text',
+      )
+  );
+  $wp_customize->add_control( 'home_intro_heading', array(
+    'label'        => __( 'Intro Title', 'snedecor' ),
+    'type'=>'text',
+    'section'    => 'intro_section',
+    'settings'   => 'casco_options[home_intro_heading]',
+  ) );
+  $wp_customize->add_setting(
     'casco_options[intro_text]',
     array(
     'default'=>esc_attr($cs_theme_options['intro_text']),
@@ -185,7 +200,6 @@ function snedecor_gl_customizer( $wp_customize ){
     'type'=>'option',
     'capability'=>'edit_theme_options',
     'sanitize_callback'=>'casco_sanitize_text',
-
       )
   );
   $wp_customize->add_control( 'casco_show_service', array(

@@ -48,6 +48,7 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			'slide_image_3' => $ImageUrl3,
 
 			// Intro Text
+			'home_intro_heading' => __('About Us', 'snedecor' ),
 			'intro_text'=>__("Casco Bay Transportation, LLC based in southern Maine, offers trucking and hauling and specializes in extremely heavy and oversize loads where complex logistics may be required. We understand that on-time delivery of these items is critical and we respect the many components that all need to work together for a successful outcome.   Our high reputation for difficult jobs makes Casco Bay Transportation the go-to company in New England.", 'snedecor' ),
 
 			//Social media links
