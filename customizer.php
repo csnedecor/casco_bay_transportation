@@ -437,30 +437,15 @@ function snedecor_gl_customizer( $wp_customize ){
     ));
 
   /*****************************************************/
-  // Social Icons
+  // Footer Options
   /*****************************************************/
 
-  $wp_customize->add_section('social_section',array(
-    'title'=>__("Contact Information",'snedecor'),
+  $wp_customize->add_section('footer_section',array(
+    'title'=>__("Footer & Header",'snedecor'),
     'capability'=>'edit_theme_options',
     'priority' => 35
   ));
 
-  $wp_customize->add_setting(
-  'casco_options[footer_section_social_media_enabled]',
-    array(
-    'default'=>esc_attr($cs_theme_options['footer_section_social_media_enabled']),
-    'type'=>'option',
-    'sanitize_callback'=>'casco_sanitize_checkbox',
-    'capability'=>'edit_theme_options'
-    )
-  );
-  $wp_customize->add_control( 'footer_section_social_media_enabled', array(
-    'label'        => __( 'Enable Social Media Icons in Footer', 'snedecor' ),
-    'type'=>'checkbox',
-    'section'    => 'social_section',
-    'settings'   => 'casco_options[footer_section_social_media_enabled]'
-  ) );
   $wp_customize->add_setting(
   'casco_options[email_id]',
     array(
@@ -473,7 +458,7 @@ function snedecor_gl_customizer( $wp_customize ){
   $wp_customize->add_control( 'email_id', array(
     'label'        =>  __('Email ID', 'snedecor' ),
     'type'=>'email',
-    'section'    => 'social_section',
+    'section'    => 'footer_section',
     'settings'   => 'casco_options[email_id]'
   ) );
   $wp_customize->add_setting(
@@ -488,7 +473,7 @@ function snedecor_gl_customizer( $wp_customize ){
   $wp_customize->add_control( 'address', array(
     'label'        =>  __('Address', 'snedecor' ),
     'type'=>'text',
-    'section'    => 'social_section',
+    'section'    => 'footer_section',
     'settings'   => 'casco_options[address]'
   ) );
   $wp_customize->add_setting(
@@ -503,8 +488,77 @@ function snedecor_gl_customizer( $wp_customize ){
   $wp_customize->add_control( 'phone_no', array(
     'label'        =>  __('Phone Number', 'snedecor' ),
     'type'=>'text',
-    'section'    => 'social_section',
+    'section'    => 'footer_section',
     'settings'   => 'casco_options[phone_no]'
+  ) );
+
+  // Add Partner logo
+  $wp_customize->add_setting(
+    'casco_options[upload_partner_logo]',
+    array(
+      'type'    => 'option',
+      'default'=>$cs_theme_options['upload_partner_logo'],
+      'sanitize_callback'=>'esc_url_raw',
+      'capability'        => 'edit_theme_options',
+    )
+  );
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'casco_upload_partner_logo', array(
+    'label'        => __( 'Partner Logo', 'snedecor' ),
+    'section'    => 'footer_section',
+    'settings'   => 'casco_options[upload_partner_logo]',
+  ) ) );
+
+  // Choose partner logo width
+  $wp_customize->add_control( 'casco_partner_logo_height', array(
+    'label'        => __( 'Partner Logo Height', 'snedecor' ),
+    'type'=>'number',
+    'section'    => 'footer_section',
+    'settings'   => 'casco_options[partner_height]',
+  ) );
+  $wp_customize->add_setting(
+    'casco_options[partner_width]',
+    array(
+      'type'    => 'option',
+      'default'=>$cs_theme_options['partner_width'],
+      'sanitize_callback'=>'casco_sanitize_integer',
+      'capability'        => 'edit_theme_options',
+    )
+  );
+  $wp_customize->add_control( 'casco_partner_logo_width', array(
+    'label'        => __( 'Partner Logo Width', 'snedecor' ),
+    'type'=>'number',
+    'section'    => 'footer_section',
+    'settings'   => 'casco_options[partner_width]',
+  ) );
+  $wp_customize->add_setting(
+    'casco_options[partner_link]',
+    array(
+    'default'=>esc_attr($cs_theme_options['partner_link']),
+    'type'=>'option',
+    'capability'=>'edit_theme_options',
+    'sanitize_callback'=>'esc_url_raw',
+  ));
+  $wp_customize->add_control( 'partner_link', array(
+    'label'        => __( 'Partner Link', 'snedecor' ),
+    'type'=>'url',
+    'section'    => 'footer_section',
+    'settings'   => 'casco_options[partner_link]'
+  ) );
+
+  $wp_customize->add_setting(
+    'casco_options[footer_customizations]',
+    array(
+    'default'=>esc_attr($cs_theme_options['footer_customizations']),
+    'type'=>'option',
+    'sanitize_callback'=>'casco_sanitize_text',
+    'capability'=>'edit_theme_options'
+    )
+  );
+  $wp_customize->add_control( 'footer_customizations', array(
+    'label'        => __( 'Footer Customization Text', 'snedecor' ),
+    'type'=>'text',
+    'section'    => 'footer_section',
+    'settings'   => 'casco_options[footer_customizations]'
   ) );
 }
 add_action( 'customize_register', 'snedecor_gl_customizer');

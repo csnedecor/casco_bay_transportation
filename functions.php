@@ -27,7 +27,6 @@ require get_template_directory() . '/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-
 if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 
 	function snedecor_default_settings() {
@@ -52,11 +51,13 @@ if ( ! function_exists( 'casco_bay_transportation_setup' ) ) :
 			'intro_text'=>__("Casco Bay Transportation, LLC based in southern Maine, offers trucking and hauling and specializes in extremely heavy and oversize loads where complex logistics may be required. We understand that on-time delivery of these items is critical and we respect the many components that all need to work together for a successful outcome.   Our high reputation for difficult jobs makes Casco Bay Transportation the go-to company in New England.", 'snedecor' ),
 
 			//Social media links
-			'footer_section_social_media_enabled'=>'1',
 			'address'  => '102 Industrial Park Rd, Saco, ME 04072',
 			'email_id' => '',
 			'phone_no' => '(207)710-2323',
 			'footer_customizations' => __(' &#169; 2016 Casco Bay Transportation', 'snedecor' ),
+			'upload_partner_logo'=>'',
+			'partner_width'=>'80',
+			'partner_link'=>'http://www.mmta.com',
 
 			// Services
 			'service_home'=>'1',
@@ -167,7 +168,7 @@ add_action( 'after_setup_theme', 'casco_bay_transportation_setup' );
  * @global int $content_width
  */
 function casco_bay_transportation_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'casco_bay_transportation_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'casco_bay_transportation_content_width', 1200 );
 }
 add_action( 'after_setup_theme', 'casco_bay_transportation_content_width', 0 );
 
@@ -185,6 +186,15 @@ function casco_bay_transportation_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Footer Widget Area', 'snedecor' ),
+		'id' => 'footer-widget-area',
+		'description' => __( 'footer widget area', 'snedecor' ),
+		'before_widget' => '<div class="col-md-12 casco_footer_widget_column">',
+		'after_widget' => '</div>',
+		'before_title' => '<div class="casco_footer_widget_title">',
+		'after_title' => '<div class="casco-footer-separator"></div></div>',
 	) );
 }
 add_action( 'widgets_init', 'casco_bay_transportation_widgets_init' );

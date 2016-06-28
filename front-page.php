@@ -1,5 +1,6 @@
 <?php get_header();
 $cs_theme_options = snedecor_get_options();
+
 $cs_theme_options['_frontpage'];
 if ($cs_theme_options['_frontpage']=="1" && is_front_page()) {
   get_template_part('home','slideshow');

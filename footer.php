@@ -36,6 +36,15 @@
           <?php if($cs_theme_options['phone_no'] !='') { ?><li><i class="fa fa-phone"></i><a href="tel:<?php echo $cs_theme_options['phone_no']; ?>"><?php echo esc_attr($cs_theme_options['phone_no']); ?></a></li><?php } ?>
         </ul>
       <?php } ?>
+        <?php if($cs_theme_options['upload_partner_logo']) {
+          if($cs_theme_options['partner_link']) { ?>
+            <a href="<?php echo $cs_theme_options['partner_link'] ?>">
+          <?php } ?>
+          <img class="img-responsive partner_logo" src="<?php echo $cs_theme_options['upload_partner_logo']; ?>" style="width:<?php if($cs_theme_options['partner_width']!='') { echo $cs_theme_options['partner_width']; }  else { "200"; } ?>px;" />
+          <?php if($cs_theme_options['partner_link']) { ?>
+            </a>
+          <?php } ?>
+        <?php } ?>
     </div>
   </div>
   <div class="container">
@@ -43,9 +52,7 @@
         <p class="casco_footer_copyright_info cs_rtl" >
         <?php if($cs_theme_options['footer_customizations']) {
           echo esc_attr($cs_theme_options['footer_customizations']);
-        } ?>
-        <?php if($cs_theme_options['footer_section_social_media_enabled'] == '1') { ?>
-        <?php } ?>
+        } ?></p>
       </div>
     </div>
 <!-- /Footer Widget Secton -->
