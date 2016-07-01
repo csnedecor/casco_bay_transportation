@@ -47,7 +47,7 @@
 				<ul class="head-contact-info">
 						<?php if($cs_theme_options['email_id'] !='') { ?><li><i class="fa fa-envelope"></i><a href="mailto:<?php echo $cs_theme_options['email_id']; ?>"><?php echo esc_attr($cs_theme_options['email_id']); ?></a></li><?php } ?>
 						<?php if($cs_theme_options['address'] !='') { ?><li><i class="fa fa-home"></i><?php echo esc_attr($cs_theme_options['address']); ?></li><?php } ?>
-						<?php if($cs_theme_options['phone_no'] !='') { ?><li><i class="fa fa-phone"></i><a href="tel:<?php echo $cs_theme_options['phone_no']; ?>"><?php echo esc_attr($cs_theme_options['phone_no']); ?></a></li><?php } ?>
+						<?php if($cs_theme_options['phone_no'] !='') { ?><li class="phone"><i class="fa fa-phone"></i><a href="tel:<?php echo $cs_theme_options['phone_no']; ?>"><?php echo esc_attr($cs_theme_options['phone_no']); ?></a></li><?php } ?>
 				</ul>
 			<?php } ?>
 
